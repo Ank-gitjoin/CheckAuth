@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const PORT = 3030
+
 // Basic routes
 app.get('/', (req, res) => {
 	res.status(200).json({
@@ -20,8 +22,7 @@ app.get('*', (req, res) => {
 	})
 })
 
-app.listen(3030)
-{
-	//	console.log(`Server running on port:${PORT}`);
-	console.log(`Server running on port:${3030}`);
-}
+app.listen(PORT, () => {
+
+	console.log(`Site is running on port http://127.0.0.1:${PORT}`)
+})
